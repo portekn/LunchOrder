@@ -31,5 +31,15 @@ namespace LunchOrder
         {
 
         }
+
+        private void ClearTotals() //Clears the totals in the Order Total group box
+        { 
+            //code to clear totals here
+        }
+
+        private void ClearAddOns() //Clears the selected add ons in the Add-on group box
+        { 
+            //code to clear add ons here
+        }
     }
 }
