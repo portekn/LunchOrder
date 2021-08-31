@@ -32,14 +32,22 @@ namespace LunchOrder
 
         }
 
+        //----------Methods----------//
         private void ClearTotals() //Clears the totals in the Order Total group box
-        { 
+        {
             //code to clear totals here
+            txtOrderTotal.Text.Equals("");
+            txtSalesTax.Text.Equals("");
+            txtSubtotal.Text.Equals("");
         }
 
         private void ClearAddOns() //Clears the selected add ons in the Add-on group box
-        { 
+        {
             //code to clear add ons here
+            checkBox1.CheckState.Equals(false);
+            checkBox2.CheckState.Equals(false);
+            checkBox3.CheckState.Equals(false);
         }
+
     }
 }
