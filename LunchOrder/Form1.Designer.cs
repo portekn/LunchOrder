@@ -166,34 +166,34 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(32, 26);
+            this.radioButton1.Location = new System.Drawing.Point(22, 26);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 24);
+            this.radioButton1.Size = new System.Drawing.Size(155, 24);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Hamburger";
+            this.radioButton1.Text = "Hamburger - $6.95";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(32, 56);
+            this.radioButton2.Location = new System.Drawing.Point(22, 56);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(64, 24);
+            this.radioButton2.Size = new System.Drawing.Size(113, 24);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pizza";
+            this.radioButton2.Text = "Pizza - $5.95";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(32, 86);
+            this.radioButton3.Location = new System.Drawing.Point(22, 86);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 24);
+            this.radioButton3.Size = new System.Drawing.Size(116, 24);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Salad";
+            this.radioButton3.Text = "Salad - $4.95";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -206,7 +206,7 @@
             this.groupBox1.Size = new System.Drawing.Size(237, 131);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add-on";
+            this.groupBox1.Text = "Add-on items ($.75/each)";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // checkBox1
