@@ -33,7 +33,7 @@ namespace LunchOrder
         }
 
         //----------Event Handlers----------//
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) //Hamburger
+        private void radioButton1_Checked(object sender, EventArgs e) //Hamburger
         {
             ClearTotals();
             ClearAddOns();

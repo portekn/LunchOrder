@@ -99,7 +99,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Hamburger - $6.95";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_Checked);
             // 
             // groupBox2
             // 
