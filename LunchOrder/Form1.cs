@@ -95,8 +95,6 @@ namespace LunchOrder
         //Kelli Porter
         private void CalculateTotals() //Preforms the calculations
         {   
-            
-
             double Main = 0; //Main course Price
             double addon = 0; //Add on price
             int cbCount = 0; //Number of check boxes checked
