@@ -125,7 +125,7 @@ namespace LunchOrder
 
             txtSubtotal.Text = sub.ToString("$#.##");
             txtSalesTax.Text = tax.ToString("$0.##");
-            txtOrderTotal.Text = total.ToString("$#.##");
+            txtOrderTotal.Text = total.ToString("$#.00");
         }
     }
 }
