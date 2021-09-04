@@ -67,6 +67,7 @@ namespace LunchOrder
         }
 
         //----------Methods----------//
+        //Kelli Porter
         private void ClearTotals() //Clears the totals in the Order Total group box
         {
             //code to clear totals here
@@ -78,7 +79,7 @@ namespace LunchOrder
                 }
             }
         }
-
+        //Kelli Porter
         private void ClearAddOns() //Clears the selected add ons in the Add-on group box
         {
             //code to clear add ons here
@@ -91,7 +92,7 @@ namespace LunchOrder
                 }
             }
         }
-
+        //Kelli Porter
         private void CalculateTotals() //Preforms the calculations
         {   
             
