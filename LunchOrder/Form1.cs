@@ -66,7 +66,7 @@ namespace LunchOrder
             {
                 if (tBox is TextBox)
                 {
-                    ((TextBox)tBox).Text = ""; ;
+                    ((TextBox)tBox).Text = "";
                 }
             }
         }
@@ -83,7 +83,6 @@ namespace LunchOrder
                 }
             }
         }
-
 
         private void CalculateTotals() //Preforms the calculations
         {   
@@ -109,9 +108,9 @@ namespace LunchOrder
             //Check how many check boxes are checked
             if (checkBox1.Checked == true)
             { cbCount++; }
-            else if (checkBox2.Checked == true)
+            if (checkBox2.Checked == true)
             { cbCount++; }
-            else if (checkBox3.Checked == true)
+            if (checkBox3.Checked == true)
             { cbCount++; }
 
             //Calculate
