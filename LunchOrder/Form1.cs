@@ -26,14 +26,7 @@ namespace LunchOrder
         //----------Event Handlers----------//
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            //Arraylist for holding answers
-            ArrayList calc = new ArrayList();
-            CalculateTotals(calc);
-
-            txtSubtotal.Text = calc[0].ToString();
-            //txtSalesTax.Text = (string)calc[1];
-            //txtOrderTotal.Text = (string)calc[2];
-
+            CalculateTotals();
         }
         private void radioButton1_Checked(object sender, EventArgs e) //Hamburger
         {
@@ -73,12 +66,9 @@ namespace LunchOrder
             {
                 if (tBox is TextBox)
                 {
-                    ((TextBox)tBox).Equals("");
+                    ((TextBox)tBox).Text = ""; ;
                 }
             }
-            //txtOrderTotal.Text.Equals("");
-            //txtSalesTax.Text.Equals("");
-            //txtSubtotal.Text.Equals("");
         }
 
         private void ClearAddOns() //Clears the selected add ons in the Add-on group box
@@ -94,7 +84,8 @@ namespace LunchOrder
             }
         }
 
-        private void CalculateTotals(ArrayList calc) //Preforms the calculations
+
+        private void CalculateTotals() //Preforms the calculations
         {   
             
 
@@ -107,32 +98,30 @@ namespace LunchOrder
             double total; //Total bill
 
             //Check what radio button is checked and set main course and addon prices
-             if (rBtn.Name.Equals(radioButton1))
-                 { Main = 6.95; addon = 0.75; }
-             else if (rBtn.Name.Equals(radioButton2))
-                 { Main = 5.95; addon = 0.50; }
-             else
-                 { Main = 4.95; addon = 0.25; }
-            
+
+                if (radioButton1.Checked == true)
+                { Main = 6.95; addon = 0.75; }
+                else if (radioButton2.Checked == true)
+                { Main = 5.95; addon = 0.50; }
+                else if (radioButton3.Checked == true)
+                { Main = 4.95; addon = 0.25; }
 
             //Check how many check boxes are checked
-            foreach (Control cBox in groupBox1.Controls)
-            {
-                if (cBox is CheckBox)
-                {
-                    cbCount++;
-                }
-            }
+            if (checkBox1.Checked == true)
+            { cbCount++; }
+            else if (checkBox2.Checked == true)
+            { cbCount++; }
+            else if (checkBox3.Checked == true)
+            { cbCount++; }
 
             //Calculate
             sub = Main + (addon * cbCount); //Calcuates the Subtotal
             tax = (7.75/100) * sub; //Calculates the tax on the order
             total = sub + tax; //Calculates the Total of the order
 
-            //Send answers to Arraylist
-            calc.Add(sub);
-            calc.Add(tax);
-            calc.Add(total);
+            txtSubtotal.Text = sub.ToString();
+            txtSalesTax.Text = tax.ToString();
+            txtOrderTotal.Text = total.ToString();
         }
     }
 }
