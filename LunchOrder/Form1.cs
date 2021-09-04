@@ -118,9 +118,9 @@ namespace LunchOrder
             tax = (7.75/100) * sub; //Calculates the tax on the order
             total = sub + tax; //Calculates the Total of the order
 
-            txtSubtotal.Text = sub.ToString();
-            txtSalesTax.Text = tax.ToString();
-            txtOrderTotal.Text = total.ToString();
+            txtSubtotal.Text = sub.ToString("$#.##");
+            txtSalesTax.Text = tax.ToString("$0.##");
+            txtOrderTotal.Text = total.ToString("$#.##");
         }
     }
 }
