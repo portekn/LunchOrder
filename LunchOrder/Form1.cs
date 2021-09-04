@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,17 @@ namespace LunchOrder
         }
 
         //----------Event Handlers----------//
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            //Arraylist for holding answers
+            ArrayList calc = new ArrayList();
+            CalculateTotals(calc);
+
+            txtSubtotal.Text = calc[0].ToString();
+            //txtSalesTax.Text = (string)calc[1];
+            //txtOrderTotal.Text = (string)calc[2];
+
+        }
         private void radioButton1_Checked(object sender, EventArgs e) //Hamburger
         {
             ClearTotals();
@@ -82,10 +94,12 @@ namespace LunchOrder
             }
         }
 
-        private void CalculateTotals() //Preforms the calculations
-        {
-            double Main; //Main course Price
-            double addon; //Add on price
+        private void CalculateTotals(ArrayList calc) //Preforms the calculations
+        {   
+            
+
+            double Main = 0; //Main course Price
+            double addon = 0; //Add on price
             int cbCount = 0; //Number of check boxes checked
 
             double sub; //Subtotal
@@ -93,15 +107,13 @@ namespace LunchOrder
             double total; //Total bill
 
             //Check what radio button is checked and set main course and addon prices
-            foreach (Control rBtn in gbxMainCourse.Controls)
-            {
-                if (rBtn.Name.Equals(radioButton1))
-                    { Main = 6.95; addon = 0.75; }
-                else if (rBtn.Name.Equals(radioButton2))
-                    { Main = 5.95; addon = 0.50; }
-                else
-                    { Main = 4.95; addon = 0.25; }
-            }
+             if (rBtn.Name.Equals(radioButton1))
+                 { Main = 6.95; addon = 0.75; }
+             else if (rBtn.Name.Equals(radioButton2))
+                 { Main = 5.95; addon = 0.50; }
+             else
+                 { Main = 4.95; addon = 0.25; }
+            
 
             //Check how many check boxes are checked
             foreach (Control cBox in groupBox1.Controls)
@@ -113,6 +125,14 @@ namespace LunchOrder
             }
 
             //Calculate
+            sub = Main + (addon * cbCount); //Calcuates the Subtotal
+            tax = (7.75/100) * sub; //Calculates the tax on the order
+            total = sub + tax; //Calculates the Total of the order
+
+            //Send answers to Arraylist
+            calc.Add(sub);
+            calc.Add(tax);
+            calc.Add(total);
         }
     }
 }
