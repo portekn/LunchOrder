@@ -63,7 +63,6 @@
             this.gbxMainCourse.TabIndex = 0;
             this.gbxMainCourse.TabStop = false;
             this.gbxMainCourse.Text = "Main Course";
-            this.gbxMainCourse.Enter += new System.EventHandler(this.gbxMainCourse_Enter);
             // 
             // radioButton3
             // 
@@ -210,7 +209,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add-on items ($.75/each)";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // checkBox3
             // 

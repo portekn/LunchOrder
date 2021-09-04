@@ -22,16 +22,6 @@ namespace LunchOrder
             this.Close();
         }
 
-        private void gbxMainCourse_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         //----------Event Handlers----------//
         private void radioButton1_Checked(object sender, EventArgs e) //Hamburger
         {
@@ -90,6 +80,39 @@ namespace LunchOrder
                     ((CheckBox)cBox).Checked = false;
                 }
             }
+        }
+
+        private void CalculateTotals() //Preforms the calculations
+        {
+            double Main; //Main course Price
+            double addon; //Add on price
+            int cbCount = 0; //Number of check boxes checked
+
+            double sub; //Subtotal
+            double tax; //Tax added on
+            double total; //Total bill
+
+            //Check what radio button is checked and set main course and addon prices
+            foreach (Control rBtn in gbxMainCourse.Controls)
+            {
+                if (rBtn.Name.Equals(radioButton1))
+                    { Main = 6.95; addon = 0.75; }
+                else if (rBtn.Name.Equals(radioButton2))
+                    { Main = 5.95; addon = 0.50; }
+                else
+                    { Main = 4.95; addon = 0.25; }
+            }
+
+            //Check how many check boxes are checked
+            foreach (Control cBox in groupBox1.Controls)
+            {
+                if (cBox is CheckBox)
+                {
+                    cbCount++;
+                }
+            }
+
+            //Calculate
         }
     }
 }
