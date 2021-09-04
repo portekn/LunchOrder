@@ -17,17 +17,17 @@ namespace LunchOrder
         {
             InitializeComponent();
         }
-
+        //----------Event Handlers----------//
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        //----------Event Handlers----------//
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
             CalculateTotals();
         }
+
         private void radioButton1_Checked(object sender, EventArgs e) //Hamburger
         {
             ClearTotals();
@@ -56,6 +56,11 @@ namespace LunchOrder
             checkBox1.Text = "Croutons";
             checkBox2.Text = "Bacon bits";
             checkBox3.Text = "Bread sticks";
+        }
+
+        private void checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+         ClearTotals();
         }
 
         //----------Methods----------//
