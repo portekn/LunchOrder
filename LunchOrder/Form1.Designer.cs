@@ -243,7 +243,6 @@
             this.checkBox1.Text = "Lettuce, tomato, and onions";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkbox_CheckedChanged);
-
             // 
             // Form1
             // 
@@ -260,7 +259,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lunch Order";
+            this.Text = "Kelli Porter's Lunch Order Application";
             this.gbxMainCourse.ResumeLayout(false);
             this.gbxMainCourse.PerformLayout();
             this.groupBox2.ResumeLayout(false);
